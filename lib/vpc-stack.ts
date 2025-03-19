@@ -11,7 +11,7 @@ export class VpcStack extends cdk.Stack {
         this.vpc = new ec2.Vpc(this, "EcommerceVPC", {
             vpcName: "ECommerceVPC",
             maxAzs: 2, //Numero de zonas
-            natGateways: 0
+            natGateways: 0 // nunca fazer em prod
         })
     }
 }
