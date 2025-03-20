@@ -10,7 +10,6 @@ interface ApiStackProps extends cdk.StackProps {
 export class ApiStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props: ApiStackProps) {
         super(scope, id, props);
-
         const vpcLink = new apigateway.VpcLink(this, "VpcLink", {
             targets: [props.nlb]
         })
